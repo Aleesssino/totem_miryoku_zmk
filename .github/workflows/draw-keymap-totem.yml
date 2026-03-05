@@ -1,4 +1,4 @@
-name: Draw ZMK keymaps for Totem
+name: Draw ZMK keymaps
 on:
   workflow_dispatch:
   push:
@@ -10,6 +10,6 @@ jobs:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     with:
       keymap_patterns: "config/totem.keymap"
-      install_args: "-p ." 
+      west_config_path: "" 
       output_folder: "keymap-drawer"
-      parse_args: "totem:'-key-labels 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37'"
+      draw_args: "totem:'-l GEOMETRY_TOTEM'"
