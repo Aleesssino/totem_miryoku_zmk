@@ -13,4 +13,3 @@ jobs:
       west_config_path: "" 
       output_folder: "keymap-drawer"
       draw_args: "totem:'-k totem'"
-      parse_args: "totem:'--combos-only'"
