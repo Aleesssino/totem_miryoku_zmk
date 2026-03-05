@@ -1,4 +1,16 @@
-uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-with:
-  keymap_patterns: "config/totem.keymap" 
-  output_folder: "keymap-drawer"     
+name: Draw ZMK keymaps
+on:
+  workflow_dispatch: 
+  push:              
+    paths:
+      - "config/*.keymap"
+      - "config/*.json"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    with:
+      keymap_patterns: "config/totem.keymap" 
+      config_path: "config/keymap_drawer.config.yaml" 
+      output_folder: "keymap-drawer"
+      parse_args: "totem:'-key-labels 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37'"
