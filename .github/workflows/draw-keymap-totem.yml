@@ -12,4 +12,5 @@ jobs:
       keymap_patterns: "config/totem.keymap"
       west_config_path: "" 
       output_folder: "keymap-drawer"
-      draw_args: "totem:'-l GEOMETRY_TOTEM'"
+      draw_args: "totem:'-k totem'"
+      parse_args: "totem:'--combos-only'"
